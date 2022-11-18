@@ -15,7 +15,7 @@
         @apply overflow-x-hidden
     }
     h2 {
-        @apply text-4xl text-lightGray font-bold pt-2
+        @apply text-4xl text-lightGray font-bold pt-4 lg:pt-2
     }
     h3 {
         @apply text-sm font-normal
@@ -281,5 +281,12 @@
     }
     h1:hover {
         background-size: 0 3px, 100% 3px;
-      }
+    }
+
+    .projects .img {
+        @apply  pt-[55.87%] relative w-full inline-block align-top overflow-hidden
+    }
+    .projects .img img {
+        @apply inset-0 block h-full w-full object-cover absolute
+    }
 }   

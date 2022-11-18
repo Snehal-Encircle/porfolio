@@ -432,12 +432,18 @@ body {
 }
 
 h2 {
-  padding-top: 0.5rem;
+  padding-top: 1rem;
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(238 238 238 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  h2 {
+    padding-top: 0.5rem;
+  }
 }
 
 h3 {
@@ -749,6 +755,14 @@ section {
   gap: 1.75rem;
 }
 
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
 .gap-10 {
   gap: 2.5rem;
 }
@@ -772,17 +786,20 @@ section {
   padding-bottom: 2.5rem;
 }
 
-.py-32 {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
-
 .pt-\[55\.87\%\] {
   padding-top: 55.87%;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
 .pl-10 {
   padding-left: 2.5rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .align-top {
@@ -1316,12 +1333,38 @@ h1:hover {
   background-size: 0 3px, 100% 3px;
 }
 
+.projects .img {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 55.87%;
+  vertical-align: top;
+}
+
+.projects .img img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  display: block;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .hover\:drop-shadow-2xl:hover {
   --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 @media (min-width: 1024px) {
+  .lg\:order-1 {
+    order: 1;
+  }
+
   .lg\:flex {
     display: flex;
   }
@@ -1334,8 +1377,17 @@ h1:hover {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .lg\:gap-12 {
+    gap: 3rem;
+  }
+
   .lg\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+
+  .lg\:py-32 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 }   
