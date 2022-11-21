@@ -21,7 +21,7 @@
         @apply text-sm font-normal
     }
     p {
-        @apply text-base font-normal pt-4 
+        @apply small:text-sm text-base font-normal pt-4 
     }
     header{
         @apply px-0 py-10 flex flex-nowrap items-center justify-between
@@ -34,7 +34,7 @@
 
 @layer components {
     .container {
-        @apply pt-[90px] lg:pt-[190px]
+        @apply py-50 md:py-[90px] lg:pt-[190px]
     }
     .main-width {
         @apply w-[1280px] max-w-[95%] my-0 mx-auto py-0 px-5
@@ -48,6 +48,11 @@
         background-size: cover;
         background-position: center;
         position: relative;
+    }
+    @media screen and (max-width:767px) {
+        section {
+            min-height: 77vh;
+        }
     }
     .no-pt {
         @apply !p-0
@@ -101,7 +106,7 @@
         @apply mb-10
     }
     .container .banner-content  h1 {
-        @apply text-white text-3xl lg:text-5xl font-black leading-[1.3] my-5 mx-0
+        @apply text-white text-2xl sm:text-3xl lg:text-5xl font-black leading-[1.3] my-5 mx-0
     }
     
     span {
@@ -115,7 +120,10 @@
     }
     /* social icons */
     .social-icon a{
-        @apply w-9 h-9 rounded-full inline-flex items-center justify-center text-base text-lightGray cursor-pointer mr-5 bg-white bg-opacity-[0.1] mb-[35px]
+        @apply w-9 h-9 rounded-full inline-flex items-center justify-center text-base text-lightGray cursor-pointer mr-2 sm:mr-5 bg-white bg-opacity-[0.1] mb-[35px]
+    }
+    .contact-inner .social-icon a:last-child {
+        @apply small:!mr-0
     }
     .social-icon a:hover {
         @apply scale-110 bg-green duration-[.4s]
@@ -190,7 +198,7 @@
         @apply w-[1130px] max-w-[95%] my-0 mx-auto items-center justify-around
     }
     section h2 {
-        @apply font-Poppins text-3xl lg:text-6xl capitalize lgscreen:pt-8
+        @apply font-Poppins text-2xl sm:text-3xl lg:text-6xl capitalize lgscreen:pt-8
     }
     .about-content h3, .service .title h3 {
         @apply text-green pt-2 lg:pt-5 text-lg lg:text-2xl
@@ -204,13 +212,13 @@
         @apply text-black font-bold tracking-wider
     }
     .card {
-        @apply bg-white hover:bg-black hover:rounded-full text-black hover:text-lightGray border border-black hover:border-white duration-[.5s] rounded-full w-[350px] h-[350px] p-50 justify-center flex flex-col items-center text-center mx-auto
+        @apply bg-white hover:bg-green hover:rounded-full text-black hover:text-lightGray border border-black hover:border-white duration-[.5s] rounded-full smallx:w-[260px] smallx:h-[260px] small:w-[290px] small:h-[290px] w-[350px] h-[350px] p-2.5 sm:p-50 justify-center flex flex-col items-center text-center mx-auto
     }
     .box .card:nth-child(2) {
         @apply lg:mt-[150px]
     }
-    .service .box h3 {
-        @apply text-3xl font-bold
+    .service .box h3, .project-info .project-name {
+        @apply text-xl sm:text-3xl font-bold
     }
     .service .title h3{
         @apply text-green 
@@ -254,7 +262,7 @@
         @apply font-Poppins text-xl text-lightGray font-bold capitalize p-5
     }
     .form {
-        @apply backdrop-blur-sm bg-blue/90 rounded-lg p-10 lg:p-50 mt-10 lg:mt-32 space-y-5 max-w-screen-sm
+        @apply backdrop-blur-sm bg-blue/90 rounded-lg p-5 sm:p-10 lg:p-50 mt-10 lg:mt-32 space-y-5 max-w-screen-sm
     }
     .form input, .form textarea, input:-webkit-autofill {
         @apply bg-black/30 bg-opacity-10 p-2 focus-within:outline-none w-full

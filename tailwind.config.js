@@ -4,7 +4,9 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        lgscreen: {min: '1024px'},
+        lgscreen: {max: '1024px'},
+        small: {max: '400px'},
+        smallx: {max: '345px'},
       },
       fontFamily: {
         Poppins: "'Poppins', sans-serif"
