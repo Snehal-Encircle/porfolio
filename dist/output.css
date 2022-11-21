@@ -711,8 +711,12 @@ section {
   left: 0px;
 }
 
-.bottom-0 {
-  bottom: 0px;
+.bottom-3 {
+  bottom: 0.75rem;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .mx-auto {
@@ -784,10 +788,6 @@ section {
   gap: 1.5rem;
 }
 
-.gap-10 {
-  gap: 2.5rem;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -817,10 +817,6 @@ section {
 
 .pl-10 {
   padding-left: 2.5rem;
-}
-
-.pb-20 {
-  padding-bottom: 5rem;
 }
 
 .text-center {
@@ -862,7 +858,7 @@ section {
 nav .menu-icon {
   position: absolute;
   right: 5%;
-  top: 7%;
+  top: 9.5%;
   z-index: 10;
   display: none;
   height: 1.75rem;
@@ -1002,7 +998,6 @@ span {
 
 .social-icon a {
   margin-right: 0.5rem;
-  margin-bottom: 35px;
   display: inline-flex;
   height: 2.25rem;
   width: 2.25rem;
@@ -1024,6 +1019,12 @@ span {
   }
 }
 
+@media (min-width: 1024px) {
+  .social-icon a {
+    margin-bottom: 35px;
+  }
+}
+
 @media (max-width: 400px) {
   .contact-inner .social-icon a:last-child {
     margin-right: 0px !important;
@@ -1042,12 +1043,18 @@ span {
 /* contact me button */
 
 .container .banner-content button {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
-.copyright {
-  padding-bottom: 1.25rem;
+@media (min-width: 1024px) {
+  .container .banner-content button {
+    margin-top: 0.5rem;
+  }
 }
+
+/* .copyright {
+        @apply pb-5
+    } */
 
 .copyright p {
   font-size: 1rem;
@@ -1093,14 +1100,14 @@ span {
 
   nav .nav-list {
     position: absolute;
-    top: 13%;
+    top: 0;
     right: -65%;
     bottom: 0;
     width: 100%;
-    height: 50%;
+    height: 80%;
     background: #000;
     z-index: 2;
-    padding: 6% 9%;
+    padding: 25% 9%;
     transition: .3s right;
     border-radius: 10px;
     display: none;
@@ -1301,8 +1308,8 @@ section h2 {
           ),
           linear-gradient(
             to left,
-            rgba(255, 0, 0, 1),
-            rgba(255, 0, 180, 1),
+            rgba(255, 255, 255, 1),
+            rgba(46, 204, 113, 1),
             rgba(0, 0, 0, 1)
         );
   background-size: 100% 3px, 0 3px;
@@ -1353,7 +1360,7 @@ section h2 {
 }
 
 .form {
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
   max-width: 640px;
 }
 
@@ -1408,8 +1415,8 @@ h1 {
           ),
           linear-gradient(
             to left,
-            rgba(255, 0, 0, 1),
-            rgba(255, 0, 180, 1),
+            rgba(255, 255, 255, 1),
+            rgba(46, 204, 113, 1),
             rgba(0, 0, 0, 1)
         );
   background-size: 100% 3px, 0 3px;
@@ -1468,6 +1475,10 @@ h1:hover {
 
   .lg\:gap-12 {
     gap: 3rem;
+  }
+
+  .lg\:gap-10 {
+    gap: 2.5rem;
   }
 
   .lg\:py-24 {
